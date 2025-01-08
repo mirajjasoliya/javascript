@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .main{
+            background-color:cornsilk;
+            height: 650px;
+            width: 1400px;
+            margin: auto;
+            margin-top:70px;
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+    </style>
+</head>
+<body>
+
+   <form action="" id="form" name="form">
+
+    <div class="main" >
+        Frist name: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" id="fname"><br><br>
+        Last name:&nbsp; &nbsp;&nbsp;  &nbsp; &nbsp; &nbsp;<input type="text" id="lname"><br><br>
+        Email:  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="email" id="eml"><br><br>
+        Mobile: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="number" id="mob"><br><br>
+        Gender: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="radio" name="rd" id="rd" checked> Male <input type="radio" name="rd" id="rd"> Female<br><br>
+        Date Of Birth: &nbsp; &nbsp; <input type="datetime-local"><br><br>
+        Address: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <textarea name="" id="add"></textarea><br><br>
+        City: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="ct"><br><br>
+        Area Pin: &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <input type="text" id="apin"><br><br>
+        state: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="text" id="sta"><br><br>
+        Quelification:  &nbsp;  &nbsp; <input type="checkbox" name="che" id="che">Computer Science<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;   &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; <input type="checkbox" name="che" id="che">Information Technology<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; <input type="checkbox" name="che" id="che">Computer Architecture<br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; <input type="checkbox" name="che" id="che">Tele Communication<br><br>
+        Password: &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; <input type="password" id="pass"><br><br>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <button  onclick="validate()">Registerd</button>
+        
+    </div>
+
+    <script>
+        function validate()
+        {
+            const quali = document.querySelectorAll('input[name="che"]:checked');
+            if(form.fname.value=="")
+            {
+                alert("plese Enter Frist name!");
+                form.fname.focus();
+                return false;
+
+            }
+             if(form.lname.value=="")
+            {
+                alert("plese Enter last name!");
+                form.fname.focus();
+                return false;
+            }
+             if(form.eml.value=="")
+            {
+                alert("plese Enter Email id!");
+                form.fname.focus();
+                return false;
+            }
+             if(form.mob.value=="")
+            {
+                alert("plese Enter Mobile Number!");
+                form.fname.focus();
+                return false;
+            }
+           
+            if(form.lname.add=="")
+            {
+                alert("plese Enter Address!");
+                form.fname.focus();
+                return false;
+            }
+            if(form.ct.value=="")
+            {
+                alert("plese Enter City name!");
+                form.fname.focus();
+                return false;
+            }
+            if(form.apin.value=="")
+            {
+                alert("plese Enter Pincode!");
+                form.fname.focus();
+                return false;
+            }
+             if(form.sta.value=="")
+            {
+                alert("plese Enter State name!");
+                form.fname.focus();
+                return false;
+            }
+             if (quali.length === 0) 
+            {
+                alert("Please select at least one qualification.");
+                return false;
+            }
+             if(form.pass.value=="")
+            {
+                alert("plese Enter Password!");
+                form.fname.focus();
+                return false;
+            }
+            else
+            {
+                alert("Successfully Form Submited...")
+            }
+        }
+    </script>
+
+   </form>
+    
+</body>
+</html>
