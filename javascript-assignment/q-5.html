@@ -1,0 +1,48 @@
+<!-- • Add, subtract, multiply, and divide two numbers using arithmetic operators. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function arithmetic(a,b) 
+        {
+    console.log(`${a} + ${b} = ${a + b}`);
+    console.log(`${a} - ${b} = ${a - b}`);
+    console.log(`${a} * ${b} = ${a * b}`);
+    console.log(`${a} / ${b} = ${a / b}`);
+}
+
+
+  function comparison(a,b) 
+  {
+    console.log(`${a} === ${b} : ${a === b}`);
+    console.log(`${a} > ${b} : ${a > b}`);
+    console.log(`${b} > ${a} : ${b > a}`);
+}
+
+            function logical(a,b) 
+            {
+    console.log(`${a > 10 && b < 5}`);
+    console.log(`${a > 10 || b < 5}`);
+    console.log(`${!(a > 10)}`);
+}
+const num1 = 15;
+const num2 = 3;
+
+console.log("Arithmetic");
+arithmeticOperations(num1,num2);
+
+console.log("\nComparison");
+comparisonOperations(num1,num2);
+
+console.log("\nLogical");
+logicalOperations(num1,num2);
+
+    </script>
+</body>
+</html>
